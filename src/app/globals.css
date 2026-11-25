@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --page: #ffffff;
+  --text: #1d1a4a;
+  --mute: #8580b0;
+  --line: #dcdaf0;
+  --chip: #f4f3fc;
+  --sk-ink: #1d1a4a;
+  --sk-card: #ffffff;
+  --sk-pri: #7c5cff;
+  --sk-acc: #ff5fa8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  overflow-x: clip;
+  background: var(--page);
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--page);
+  font: 500 15px/1.45 -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+  transition: background 0.2s, color 0.2s;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2.5px solid #ff5fa8;
+  outline-offset: 3px;
+}
+
+.sk-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 13px;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  background: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+.sk-pill:hover {
+  border-color: var(--text);
+  background: var(--chip);
+}
+
+.sk-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1.5px solid var(--line);
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+/* Smooth custom scrollbar for Responsive Modal Scrollable Body */
+.sk-modal-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #cbc6ee transparent;
+}
+
+.sk-modal-scroll::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.sk-modal-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sk-modal-scroll::-webkit-scrollbar-thumb {
+  background-color: #cbc6ee;
+  border-radius: 999px;
+}
+
+.sk-modal-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #8580b0;
+}
